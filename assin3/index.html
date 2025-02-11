@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Problem Solving</title>
+</head>
+<body>
+
+    <h2>1. ATM Withdrawal System</h2>
+    <label>Balance: <input type="number" id="balance" value="5000"></label><br>
+    <label>Amount: <input type="number" id="amount"></label><br>
+    <label>PIN: <input type="password" id="pin"></label><br>
+    <label>Confirm PIN: <input type="password" id="enteredPin"></label><br>
+    <button onclick="processATMWithdrawal()">Withdraw</button>
+    <p id="atmResult"></p>
+
+    <h2>2. Online Shopping Discount & Free Shipping</h2>
+    <label>Order Amount: <input type="number" id="orderAmount"></label><br>
+    <button onclick="processShoppingDiscount()">Calculate Final Amount</button>
+    <p id="shoppingResult"></p>
+
+    <h2>3. Student Grading System with Extra Credit</h2>
+    <label>Marks: <input type="number" id="marks"></label><br>
+    <label>Attendance %: <input type="number" id="attendance"></label><br>
+    <button onclick="processStudentGrade()">Calculate Grade</button>
+    <p id="gradeResult"></p>
+
+    <h2>4. Smart Traffic Light System</h2>
+    <label>Traffic Density: 
+        <select id="trafficDensity">
+            <option value="Heavy Traffic">Heavy Traffic</option>
+            <option value="Moderate Traffic">Moderate Traffic</option>
+            <option value="Light Traffic">Light Traffic</option>
+        </select>
+    </label>
+    <button onclick="processTrafficLight()">Check Green Time</button>
+    <p id="trafficResult"></p>
+
+    <h2>5. Movie Ticket Pricing</h2>
+    <label>Age: <input type="number" id="age"></label><br>
+    <label>Show Time (24hr format): <input type="number" id="showTime"></label><br>
+    <button onclick="processTicketPrice()">Calculate Ticket Price</button>
+    <p id="ticketResult"></p>
+
+    <h2>6. Job Application Filter</h2>
+    <label>Age: <input type="number" id="jobAge"></label><br>
+    <label>Experience (Years): <input type="number" id="experience"></label><br>
+    <label>Qualification: <input type="text" id="qualification"></label><br>
+    <button onclick="processJobEligibility()">Check Eligibility</button>
+    <p id="jobResult"></p>
+
+    <h2>7. E-commerce Coupon Redemption</h2>
+    <label>Order Amount: <input type="number" id="couponAmount"></label><br>
+    <label>Coupon Code: <input type="text" id="couponCode"></label><br>
+    <button onclick="processCoupon()">Apply Coupon</button>
+    <p id="couponResult"></p>
+
+    <h2>8. Fitness Membership Plan</h2>
+    <label>Plan Type: 
+        <select id="planType">
+            <option value="Basic">Basic</option>
+            <option value="Premium">Premium</option>
+            <option value="VIP">VIP</option>
+        </select>
+    </label><br>
+    <label>Want Trainer? <input type="checkbox" id="wantsTrainer"></label><br>
+    <label>Want Diet Plan? <input type="checkbox" id="wantsDietPlan"></label><br>
+    <button onclick="processPlan()">Choose Plan</button>
+    <p id="planResult"></p>
+
+    <h2>9. Electricity Bill Calculation</h2>
+    <label>Units Consumed: <input type="number" id="units"></label><br>
+    <label>Time of Day (24hr format): <input type="number" id="timeOfDay"></label><br>
+    <button onclick="processElectricityBill()">Calculate Bill</button>
+    <p id="electricityResult"></p>
+
+    <h2>10. Flight Ticket Booking System</h2>
+    <label>Class Type: 
+        <select id="classType">
+            <option value="Economy">Economy</option>
+            <option value="Business">Business</option>
+            <option value="First">First</option>
+        </select>
+    </label><br>
+    <label>Luggage Weight (kg): <input type="number" id="luggageWeight"></label><br>
+    <label>Student? <input type="checkbox" id="isStudent"></label><br>
+    <label>Senior Citizen? <input type="checkbox" id="isSenior"></label><br>
+    <button onclick="processFlightFare()">Calculate Fare</button>
+    <p id="flightResult"></p>
+
+    <script src="all.js"></script>
+
+</body>
+</html>
