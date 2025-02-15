@@ -1,5 +1,4 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
 function addToCart(id, name, price) {
     let product = cart.find(item => item.id === id);
     if (product) {
@@ -18,7 +17,7 @@ function updateCart() {
 
     cart.forEach(item => {
         let li = document.createElement("li");
-        li.innerHTML = `${item.name} - $${item.price} x ${item.quantity} <button onclick="removeFromCart(${item.id})">Remove</button>`;
+        li.innerHTML = `${item.name} - Rs${item.price} x ${item.quantity} <button onclick="removeFromCart(${item.id})">Remove</button>`;
         document.getElementById("cart-items").appendChild(li);
         total += item.price * item.quantity;
     });
@@ -28,7 +27,14 @@ function updateCart() {
 }
 
 function removeFromCart(id) {
+    let product = cart.find(item => item.id === id);
+    if (product) {
+        if (product.quantity > 1) {
+            product.quantity--;
+        } else {
     cart = cart.filter(item => item.id !== id);
+        }
+    }
     updateCart();
 }
 
@@ -36,16 +42,12 @@ function clearCart() {
     cart = [];
     updateCart();
 }
-
 function toggleCart() {
     console.log("Cart toggled");
-    function toggleCart() {
-        console.log("Cart toggled");
-        document.getElementById("cart").classList.toggle("show");
-    }
-    
+    document.getElementById("cart").classList.toggle("show");
 }
-
 updateCart();
+
+
 
 

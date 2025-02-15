@@ -112,7 +112,7 @@ main {
 
 /* Cart Styles */
 .cart {
-    display: none; /* Initially hidden */
+    display: flex; 
     position: fixed;
     right: 20px;
     top: 60px;
